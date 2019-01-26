@@ -7,3 +7,7 @@ in a HashMap. After all days have had their solutions run and stored, `main` cal
 `printSolutions()`  which prints solutions to the terminal window.
 
 ## TODO
+
+- Add tests for previously solved puzzles
+
+## Questions
