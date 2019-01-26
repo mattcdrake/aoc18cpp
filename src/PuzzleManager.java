@@ -1,29 +1,20 @@
-import java.io.File;
+import days.*;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
-import java.util.Scanner;
 
-class PuzzleSolver {
+class PuzzleManager {
   // Storing each puzzle solution as a string, with an Integer value indicating that puzzle's
   // chronological number.
   private HashMap<Integer, String> solutions;
 
-  PuzzleSolver() throws FileNotFoundException {
+  PuzzleManager() throws FileNotFoundException {
     solutions = new HashMap<>();
-    solutions.put(1, solve1());
+    Day day1 = new Day1();
+    solutions.put(1, day1.getSolution1());
+    solutions.put(2, day1.getSolution2());
   }
 
-  private String solve1() throws FileNotFoundException {
-    File inputFile = new File("input_data/day1.txt");
-    Scanner inputReader = new Scanner(inputFile);
-    while (inputReader.hasNextLine()) {
-      System.out.println(inputReader.nextLine());
-    }
-    inputReader.close();
-    return "we're getting somewhere";
-  }
-
-  void printPuzzleSolutions() {
+  void printSolutions() {
     int day;
     int puzzle;
     for (int i = 1; i < solutions.size() + 1; i++) {

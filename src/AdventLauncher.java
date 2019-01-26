@@ -3,8 +3,8 @@ import java.io.FileNotFoundException;
 public class AdventLauncher {
   public static void main(String[] args) {
     try {
-      PuzzleSolver puzzleSolver = new PuzzleSolver();
-      puzzleSolver.printPuzzleSolutions();
+      PuzzleManager puzzleManager = new PuzzleManager();
+      puzzleManager.printSolutions();
     } catch (FileNotFoundException e) {
       System.out.println("Input data files are missing!!!");
       e.printStackTrace();
