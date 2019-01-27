@@ -8,6 +8,6 @@ in a HashMap. After all days have had their solutions run and stored, `main` cal
 
 ## TODO
 
-- Add tests for previously solved puzzles
+- [x] Add tests for previously solved puzzles
 
 ## Questions

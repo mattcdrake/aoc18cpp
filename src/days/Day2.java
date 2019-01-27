@@ -43,9 +43,6 @@ public class Day2 extends Day {
         hasThree++;
       }
     }
-
-    System.out.println("hasTwo: " + hasTwo);
-    System.out.println("hasThree: " + hasThree);
     return String.valueOf(hasTwo * hasThree);
   }
 
@@ -75,6 +72,15 @@ public class Day2 extends Day {
     return output;
   }
 
+  /**
+   * Calculates the "distance" between two strings - the number of characters different between
+   * them. Returns -1 if strings are different length, although maybe it should just count each
+   * additional letter as another unit of distance.
+   *
+   * @param string1
+   * @param string2
+   * @return int - distance between string1 and string2
+   */
   private int calcStringDistance(String string1,  String string2) {
     // Returns -1 if strings are unequal length
     if (string1.length() != string2.length()) {
@@ -87,10 +93,16 @@ public class Day2 extends Day {
         stringDistance++;
       }
     }
-
     return stringDistance;
   }
 
+  /**
+   * Strips out different characters between two strings, leaving only those that are equal in both.
+   *
+   * @param string1
+   * @param string2
+   * @return String - new string containing identical characters between string1 and string2
+   */
   private String stripDifferent(String string1, String string2) {
     StringBuilder output = new StringBuilder();
     for (int i = 0; i < string1.length(); i++) {

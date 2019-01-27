@@ -2,11 +2,24 @@ import days.*;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 
+/**
+ * PuzzleManager creates an instance for each day's solution (following "Day[n]" naming convention).
+ * It then calls each day's solutions and stores the result in a HashMap mapping puzzle numbers to
+ * a string representation of its solution.
+ *
+ * @author Matt Drake
+ **/
 class PuzzleManager {
   // Storing each puzzle solution as a string, with an Integer value indicating that puzzle's
   // chronological number.
   private HashMap<Integer, String> solutions;
 
+  /**
+   * No-arg constructor which will instantiate each day (that I've solved), run their solutions,
+   * and store the answers in a HashMap.
+   *
+   * @throws FileNotFoundException if a day's input file is missing or corrupt
+   */
   PuzzleManager() throws FileNotFoundException {
     solutions = new HashMap<>();
 
@@ -19,6 +32,9 @@ class PuzzleManager {
     solutions.put(4, day2.getSolution2());
   }
 
+  /**
+   * Writes each puzzle solution to console.
+   */
   void printSolutions() {
     int day;
     int puzzle;

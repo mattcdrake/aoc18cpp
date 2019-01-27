@@ -4,7 +4,13 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.HashSet;
 
+/**
+ * Day 1 puzzle solutions.
+ *
+ * @author Matt Drake
+ */
 public class Day1 extends Day {
+
   public Day1() throws FileNotFoundException {
     this.setSolution1(this.solve1());
     this.setSolution2(this.solve2());
